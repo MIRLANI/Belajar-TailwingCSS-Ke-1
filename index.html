@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- memberikan huruf tambahan kalau tidak ada ditalwind -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,6 +15,8 @@
     <link rel="stylesheet" href="css.css" />
     <title>Belajar TailwindCSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- memberikan styling tambahan kalau styling yang ada ditailwind kurang -->
     <script>
       tailwind.config = {
         theme: {
@@ -33,9 +37,17 @@
       };
     </script>
 
-    <style type="text/tailwindcss"></style>
+<!-- meberikan border untuk belajar margin -->
+    <!-- <style type="text/tailwindcss">
+        *{
+            border: solid red 1px;
+        }
+    </style> -->
+
   </head>
   <body>
+
+
     <h1 class="text-6xl font-bold text-center my-10 ">
         Mari Belajar
      <span class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"> TailwindCSS</span> 
