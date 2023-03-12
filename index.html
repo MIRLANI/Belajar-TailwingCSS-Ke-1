@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css.css" />
+    <title>Belajar TailwindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            colors: {
+              clifford: "#da373d",
+              lani: "#bada55",
+              kopi: "c0ffee",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss"></style>
+  </head>
+  <body>
+    <h1 class="text-6xl font-bold text-center my-10 ">
+        Mari Belajar
+     <span class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"> TailwindCSS</span> 
+    </h1>
+
+    <section class="mb-10 bg-gradient-to-br from-indigo-300 via-red-600 to-yellow-300">
+
+      <h2 class="text-center text-2xl">Spacing</h2>
+      <div class="m-13 text-center">Margin</div>
+      <div class="py-10 text-right">padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-400">
+      <h2>Sizing</h2>
+      <div class="w-32 h-32 bg-lani">Kotak 1</div>
+    </section>
+
+    <section class="mb-10 font-inter max-w-3xl mx-auto">
+      <h2 class="mb-3 text-4xl">Belajar Mengenail Typograpi di TailwindCSS</h2>
+      <p class="mb-10 text-lg text-gray-500">
+        By <a href="" class="font-bold text-gray-700">Muhamad Mirlani</a> 12,
+        Maret 2023
+      </p>
+      <p class="mb-10">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, repellat.
+        Amet maxime deserunt soluta ipsa
+        <a href="#" class="underline font-semibold text-blue-600">sapiente</a>
+        unde explicabo impedit. Temporibus, facere molestiae. Illum nihil modi,
+        sunt, rerum repellat natus, ipsa a voluptatem molestiae doloribus
+        dignissimos voluptatum magni impedit eius voluptate dolor! Dolorum ab
+        voluptate sunt, qui perspiciatis, sapiente eveniet deleniti commodi ipsa
+        animi autem neque facere corrupti laudantium eligendi fugit? Tempora,
+        rerum atque! Inventore eum excepturi nam consequuntur minus temporibus
+        impedit laudantium atque quo recusandae cupiditate molestiae, dolor
+        similique eligendi est saepe ad quam illum sequi nostrum omnis, soluta,
+        rem labore! Repudiandae sed laborum quo omnis nulla corporis et vero.
+      </p>
+      <blockquote class="mb-10 font-light text-xl italic">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sed
+        voluptas perferendis temporibus ipsa tenetur quasi vitae minus, ex,
+        ducimus distinctio consectetur ullam quas error necessitatibus at velit
+        asperiores vel ratione inventore repudiandae. Saepe libero magni itaque
+        praesentium ex dolor aliquam nobis repellendus ipsum laborum iure error,
+        doloribus eveniet eaque."
+      </blockquote>
+      <p class="mb-10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi tempora
+        fuga odit reiciendis inventore nemo, eligendi corrupti facere,
+        exercitationem blanditiis voluptatum. Autem consequuntur assumenda
+        deleniti, expedita iusto laboriosam doloremque mollitia?
+      </p>
+    </section>
+  </body>
+</html>
