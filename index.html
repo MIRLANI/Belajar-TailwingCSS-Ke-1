@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,6 +19,7 @@
     <!-- memberikan styling tambahan kalau styling yang ada ditailwind kurang -->
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             spacing: {
@@ -38,20 +39,20 @@
     </script>
 
     <!-- meberikan border untuk belajar margin -->
-    <!-- <style type="text/tailwindcss">
-        *{
-            border: solid red 1px;
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle{
+          @apply translate-x-5;
         }
-    </style> -->
+    </style>
+
   </head>
-  <body>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="text-6xl font-bold text-center my-10">
       Mari Belajar
       <span
-        class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
-      >
-        TailwindCSS</span
-      >
+        class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent">
+        TailwindCSS
+      </span>
     </h1>
 
     <section
@@ -103,36 +104,148 @@
       </p>
     </section>
 
-    <div
-      class="max-w-xl h-96 bg-[#bada555] mx-auto mt-[42] overflow-y-scroll bg-local"
-      style="background-image:url(img/Htp_MBKM.jpg) ;"
-      <p class="p-5 text-2xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quas
-        magni nostrum sint molestias non animi eius magnam delectus cupiditate
-        perferendis quod quibusdam explicabo soluta expedita voluptatibus fuga,
-        fugit dolor enim sunt beatae voluptate quia in ipsam. Autem, nemo?
-        Tenetur saepe culpa magni, quidem obcaecati, accusamus iusto dolorum
-        totam illum asperiores corrupti maxime, voluptatibus aspernatur
-        accusantium animi. Quibusdam facilis similique delectus ipsa quisquam
-        ipsum, porro tempora dolorem sit quaerat sapiente. Sit voluptatum
-        nostrum numquam nemo dignissimos eveniet distinctio mollitia aperiam,
-        minus rem? Quisquam cupiditate ipsa voluptatum consequatur, dignissimos
-        sit repellat provident quam quaerat quo ratione labore laudantium,
-        impedit, rerum quia iste laboriosam placeat nemo. Officiis a architecto
-        nemo tempore reiciendis qui nostrum vero nulla eius illo iure quis
-        necessitatibus, ipsum ipsam labore ipsa? Harum, nam iure maxime maiores
-        accusamus voluptatibus consequuntur quos culpa possimus. Et commodi
-        rerum, autem consequuntur, modi neque repudiandae, officia iste vero
-        laboriosam hic tempore explicabo qui odit! Earum, nulla. Dolores fugiat
-        eum numquam explicabo ipsum quis, neque porro consequuntur aliquam iure
-        nam dolore incidunt nesciunt corrupti aperiam! Dolorum recusandae
-        quibusdam nihil enim facere sunt placeat culpa repudiandae cum itaque
-        natus quo sequi iusto laudantium ex tenetur velit, sed excepturi nam
-        perspiciatis nesciunt. Cum sint eveniet officia.
-      </p>
-    </div>
+ 
+<div class="max-w-2xl h-96 m-auto bg-[#bada55] text-xl overflow-y-scroll bg-scroll"
+   style="background-image:url(img/Htp_MBKM.jpg) ;">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum beatae consectetur fuga distinctio ipsam, deleniti id iure architecto quo labore obcaecati perferendis repellendus dolorum deserunt non doloribus nobis enim. A dolores accusamus vitae libero illo placeat incidunt nemo magnam excepturi minima non iste ad, minus error numquam voluptas earum dolore maxime provident facilis eligendi modi quis iure natus. Itaque ipsa, voluptatibus, exercitationem eaque tempora nostrum blanditiis amet labore quae tenetur vel quis nihil culpa. Ut nulla doloribus vel distinctio nemo placeat recusandae rem minima, perferendis quae, fugiat ex modi maiores. Blanditiis aperiam officia ratione, exercitationem nobis id explicabo doloremque placeat earum dicta praesentium expedita nulla neque alias vel inventore error accusamus dignissimos illum asperiores a! Laborum, a laudantium commodi doloribus eum, corrupti aperiam, vero numquam natus in culpa minus magni consectetur odit sapiente hic. Odio tenetur nihil quis. Itaque eum quaerat, cum error eveniet distinctio reiciendis libero accusantium eos natus. Consectetur, dolore est cumque blanditiis fuga iste suscipit! Dolore, culpa vitae porro iste ut ad eius quo soluta labore consequuntur tempora itaque laboriosam ipsam veritatis accusamus rerum, molestiae debitis omnis incidunt veniam impedit nostrum similique. Maxime quia, expedita blanditiis quae fuga repellendus placeat cumque a quod dolores, asperiores doloribus accusamus.
+  </p>
+</div>
+
+<div class="mt-32 bg-slate-300 w-[660px] h-[460px] m-auto bg-contain bg-no-repeat bg-left rounded-2xl  shadow-2xl shadow-sky-400 opacity-90 overflow-hidden border-8 flex" style="background-image: url(img/Htp_MBKM.jpg);">
+
+ <div class="w-[200px] h-[200px] rounded-full bg-white/30 backdrop-blur-sm m-auto ">
+
+ </div>
+</div>
    
+<hr class="my-20">
+
+
+<!-- membuat tombo untuk darkmode -->
+<div class="flex
+            justify-center
+            ">
+    <span class="text-sm  
+              text-slate-500">Light</span>
+    <input type="checkbox" id="toggle" class="hidden">
+    <label for="toggle" > 
+      <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center">
+        <div class="w-4 h-4  bg-white rounded-full cursor-pointer toggle-circle"></div>
+      </div>
+    </label>
+    <span class="text-sm  
+               text-slate-500">Dark</span>
+</div>
+
+
+<!-- halaman untuk pertemuan kedua -->
+<!-- membuat tombol -->
+<button class="my-10 
+               bg-sky-500  
+               px-5 
+               py-2 
+               rounded-full
+               text-white 
+               font-semibold 
+               font-inter 
+               mx-auto 
+               block 
+               hover:bg-sky-700 
+               active:bg-sky-900 
+               focus:ring-sky-600  
+               dark:bg-yellow-500
+               dark:text-gray-900
+               dark:hover:bg-yellow-200">Simpan</button>
+
+<div class="max-w-lg my-10 border
+             border-slate-200 
+             rounded-xl 
+             mx-auto 
+             p-5 
+             shadow-md  
+             hover:bg-sky-500 
+             group 
+             dark:bg-slate-200">
+
+            <h5 class="font-bold mb-2 text-slate-700 text-lg group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
+                <p class="text-slate-600 group-hover:text-white
+                    selection:bg-lime-300
+                    selection:text-slate-800 
+
+                    first-line:uppercase 
+                    first-line:tracking-widest 
+                    first-letter:text-7xl 
+                    first-letter:float-left 
+                    first-letter:mr-3
+
+                  dark:group-hover:text-slate-800">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, beatae! Officiis sit officia, harum temporibus neque nisi illo. Ex dicta quod reprehenderit voluptatum enim explicabo voluptate doloremque, perspiciatis voluptas quo? Porro ullam illo laudantium unde odit, nostrum nobis inventore exercitationem eos excepturi quae a tenetur pariatur, asperiores eaque praesentium quo!
+                </p>
+  </div>
+    
+
+<div class="max-w-lg 
+            border
+            border-slate-200 
+            p-5 rounded-lg 
+            mx-auto 
+            shadow-md 
+            font-inter">
+      <form action="">
+        <label for="email">
+          <span class="mb-3 
+                      font-semibold 
+                      block 
+                      text-slate-700 
+
+                      after:content-['*'] 
+                      after:text-red-500 
+                      after:ml-0.5">Email</span>
+
+                <input type="email" placeholder="Masukan Email..."  id="email"
+                      class="px-3 
+                              py-2 
+                              shadow 
+                              border 
+                              rounded 
+                              w-full 
+                              block 
+                              text-sm 
+                              placeholder:text-slate-400 
+
+                              focus:outline-none 
+                              focus:ring-1 
+                              focus:ring-blue-500 
+                              focus:border-sky-500
+
+                              invalid:text-red-500
+                              invalid:focus:ring-red-500  
+                              invalid:border-red-700 peer ">
+
+                  <!-- mengenail visible dan peer  -->
+                <p class="text-sm 
+                          m-1 
+                          text-red-500 
+                          invisible 
+                          peer-invalid:visible">Email tidak valid </p>
+           </label>
+      </form>
+</div>
+
+
+
+
 
     <div class="mb-96"></div>
+    <script>
+       const checkbox = document.querySelector('#toggle');
+      //  kita ambil html
+       const html = document.querySelector('html');
+      //  kemudian kita eksekusi menggunakan ternay operator
+       checkbox.addEventListener('click', function(){
+          checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+       });
+    </script>
   </body>
 </html>
